@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+<title>Portfolio</title>
+</head>
+<body>
+  <div id="dim"></div>
+     <header>
+        <nav>
+            <a href="#">Miracle.</a>
+
+            <ul id="listItem">
+              <i class="fa-solid fa-xmark" id="closeMe"></i>
+              <li> <a href="#home">Home</a></li>
+              <li> <a href="#about">About Me</a></li>
+              <li> <a href="#service">Service</a></li>
+              <li> <a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+               <div class="modeCon"><img src="Images/dark.svg" alt="" class="iconMode"></div>
+              <i class="fa-solid fa-bars" id="openMe"></i>
+        </nav>
+      </header>
+      <!-- The Hero part: 2 -->
+       <section class="Hero" id="home">
+        <div class="text">
+            <h2>Hi, I’m <span >Miracle Benjamin</span></h2>
+            <p>A Proficient <strong>Web Developer</strong> 
+                and <strong>Graphic Designer</strong> dedicated to creating captivating designs that inspire 
+                and websites that perform. With a strong eye for detail and a love for clean, modern aesthetics, 
+                I blend creativity with technology to deliver visually stunning and user friendly solutions. Whether 
+                it’s crafting unique brand identities or building responsive web platforms, my goal is to bring ideas to life
+                 and help brands stand out in the digital world.</p>
+        <div class="links">
+            <div class="social-media">
+               <div class="socialIcon"><a href="https://www.linkedin.com/in/miracle-benjamin-8aa22037b/" target="_blank"><i class="fa-brands fa-linkedin"></a></i></div>
+                <div class="socialIcon"><a href="https://wa.me/+2347032268629" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
+                <div class="socialIcon"><a href="https://www.facebook.com/share/1a3AmvPYYb/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+                <div class="socialIcon"><a href="https://x.com/Miracle98487415" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></div>
+            </div>
+            <button class="btn"><a href="#contact">Get in Touch</a></button>
+        </div>
+        </div>
+
+        <div class="image">
+            <img src="Images/Miracle.jpg" alt="Miracle. jpg">
+        </div>
+       </section> 
+       <!-- The about us section  -->
+        <section id="about">
+          <div class="about-container">
+                <div class="about-img"><img src="/Images/About.png" alt=""></div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                  Passionate Web Developer focused on creating responsive, and user-friendly web
+                  applications using HTML, CSS, and JavaScript. Dedicated to writing clean code and 
+                  crafting seamless user experiences through modern web technologies.
+                </p>
+            <div class="main">
+              <p class="details special" onclick="showSkill('skills', this)">Skills</p>
+              <p class="details" onclick="showSkill('experience', this)">Experience</p>
+              <p class="details" onclick="showSkill('education', this)">Education</p>    
+            </div>  
+
+            <div class="list active" id="skills">
+              <ul>
+                <li><span>Graphic Design</span><br>Creative in designing visuals and layouts  for web and social media projects.</li>
+                <li><span>Web Developer</span><br>Builds responsive, user-friendly web apps with HTML, CSS and JavaScript.</li>
+                <li><span>Web Design</span><br>Applies design principles, layout, and typography to create clean, accessible, and intuitive user interfaces.</li>
+              </ul>  
+            </div>    
+
+            <div class="list" id="experience">
+              <ul>
+                <li><span>Web Development Intern:</span><br> Wedigraf (2025)</li>
+                <li><span>Built and styled responsive web pages:</span> <br> Using HTML, CSS and Javascript.</li>
+              </ul> 
+            </div>
+            <div class="list" id="education">
+              <ul>
+                <li><span>Degree Program</span><br>Akwa Ibom state University,Nigeria</li>
+                <li><span>Expected Graduation:</span><br>2026</li>
+                <li><span>Current Level:</span><br>300Level </li>
+              </ul> 
+            </div>   
+        </section>
+       <!-- My Service section  -->
+        <section id="service">
+            <h2>My Services</h2>
+           <div class="service-container">
+                 <div class="items">
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Web Design</h2>
+                    <p>I design clean, modern, and user-friendly websites that reflect your brand and create a smooth user experience.</p>
+                </div>
+                <div class="items">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Web Development</h2>
+                    <p>I build fast, responsive, and secure websites using the latest technologies to bring your ideas to life.</p>
+                </div>        
+                <div class="items">
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <h2>Grahics Design</h2>
+                    <p>I create high quality graphics that combine creativity and strategy to strengthen brand identity and communication</p>
+                </div>      
+           </div>      
+        </section>
+            <!-- My portfolio/Work section  -->
+        <section id="portfolio">
+          <h2>My Work</h2>
+          <div class="work-container">
+              <div class="work-items">
+                <img src="Images/Saas.jpg" alt="My-work">
+                <div class="details">
+                  <h2>Saas Website</h2>
+                  <p>The Fastest Way For startups to do any Analysis</p>
+                  <button><a href="https://199benji.github.io/Saas-site/" target="_blank">Visit Site</a></button>
+                </div>
+              </div>
+              <div class="work-items">
+                <img src="Images/Beauty.jpg" alt="My-work">
+                <div class="details">
+                  <h2>Beauty and Personal Care Site</h2>
+                  <p>Featured essentials created to refresh, protect, and enhance your natural beauty with a touch of elegance.</p>
+                  <button><a href="https://199benji.github.io/Beauty-site/" target="_blank">Visit Site</a></button>
+                </div>
+              </div>
+              <div class="work-items">
+                <img src="Images/Shoe.jpg" alt="My-work">
+                <div class="details">
+                  <h2>Shoe E-commerce Site</h2>
+                  <p>Where comfort meets style — crafted with quality and designed for every occasion.</p>
+                  <button><a href="https://199benji.github.io/Shoe-E-commerce/" target="_blank">Visit Site</a></button>
+                </div>
+              </div>
+          </div>
+          <button id="more">See More</button>
+          <!-- The Hidden -->
+           <div class="work-container" id="hide">
+              <div class="work-items">
+                <img src="Images/max.jpg" alt="My-work">
+                <div class="details">
+                  <h2>Business Website</h2>
+                  <p>Business Advisory Service Provider</p>
+                  <button><a href="https://199benji.github.io/Aconsulting/" target="_blank">Visit Site</a></button>
+                </div>
+              </div>
+              <div class="work-items">
+                <img src="Images/" alt="">
+                <div class="details">
+                </div>
+              </div>
+              <div class="work-items">
+                <img src="Images/" alt="">
+                <div class="details">
+                </div>
+              </div>              
+          </div>
+          <button id="less">See less</button>
+        </section>
+            <!-- My contact section  -->
+             <section class="contact-text" id="contact">
+              <h2>Contact Me</h2>
+              <div class="contact-container">
+                <div class="contact-text">
+                  <h2>Get in Touch</h2>
+                  <p>
+                      Feel free to contact me for collaborations, inquiries, or any questions. 
+                      I’ll be glad to respond as soon as possible
+                  </p>
+                    <div class="contact-flex">
+                      <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                      <div class="flex-text">
+                        <h3>Email</h3>
+                        <a href="mailto:benjaminmiracle332@gmail.com" target="_blank">benjaminmiracle332gmail.com</a>
+                      </div>                      
+                    </div>
+                     <div class="contact-flex">
+                      <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                      <div class="flex-text">
+                        <h3>Address</h3>
+                        <p>Uyo Akwa Ibom State, Nigeria.</p>
+                      </div>                      
+                    </div>
+                     <div class="contact-flex">
+                      <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                      <div class="flex-text">
+                        <h3>Phone Number</h3>
+                        <a href="tel:+2347032268629">+234 703 226 8629</a>
+                      </div>                      
+                    </div>
+                </div>
+
+                <form class="form">
+                  <div class="inputs">
+                    <div class="input">
+                      <label>Name:</label> <br>
+                      <input type="text" placeholder="Enter your name..." maxlength="40" required><br>
+                    </div>
+                    <div class="input">
+                      <label>Email:</label> <br>
+                      <input type="email" placeholder="Enter your email..."maxlength="30" required><br>
+                    </div>
+                  </div>
+                  <label>Phone number </label><br>
+                  <input type="number" placeholder="Enter your Phone Number:" maxlength="11" required><br>
+                  <label>Message </label><br>
+                  <textarea placeholder="Enter your Message...." required></textarea><br>
+                  <button>Submit</button>
+                </div>
+              </form>
+            </section>
+            <!-- My Footer section  -->
+             <Footer>
+              <div class="footer_social_icons">
+                <div><a href="https://www.linkedin.com/in/miracle-benjamin-8aa22037b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+                <div><a href="https://wa.me/+2347032268629" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
+                <div><a href="https://www.facebook.com/share/1a3AmvPYYb/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+                <div><a href="https://x.com/Miracle98487415" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></div>
+              </div>
+              <ul class="footer_nav">
+                <li> <a href="#home">Home</a></li>
+                <li> <a href="#about">About Me</a></li>
+                <li> <a href="#service">Service</a></li>
+                <li> <a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <hr>
+              <p>© <span id="year"></span> Miracle Benjamin. All rights reserved.</p>
+             </Footer>      
+
+<script src="app.js"></script>   
+</body>
+</html>

@@ -1,0 +1,736 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* THE ROOT COLORS  */
+:root {
+  --primary-color: #fdf0d5;
+  --secondary-color: #011b28;
+}
+.dark-theme {
+  --primary-color: #001f2f;
+  --secondary-color: #fdf0d5;
+}
+.iconMode {
+  width: 15px;
+  cursor: pointer;
+}
+.modeCon {
+  border: 1px solid var(--secondary-color);
+  padding: 5px 7px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}
+body {
+  background-color: var(--primary-color);
+}
+#dim{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+/* The header part:1  */
+header {
+  background-color: var(--primary-color);
+  padding: 0px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav span {
+  color: var(--secondary-color);
+}
+nav #listItem {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 20px;
+  gap: 30px;
+  font-family: poppins;
+}
+#listItem li a::after {
+  content: "";
+  width: 0%;
+  height: 2.5px;
+  background: var(--secondary-color);
+  display: block;
+  margin: auto;
+  transition: all 0.5s;
+}
+#listItem li a:hover::after {
+  width: 100%;
+}
+#closeMe,
+#openMe{
+  display: none;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+/* For mobile menu bar................................................................................. */
+@media (max-width: 750px) {
+
+#openMe{
+  display: block;
+}
+#closeMe{
+  display: block;
+}
+#listItem{
+  flex-direction: column;
+  padding-top: 20px;
+  align-items: center;
+  background-color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  font-family: poppins;
+  gap: 20px;
+  position: absolute;
+  top: -3000px;
+  right: 80px;
+  left: 50%;
+  width: 200px;
+  height: 100vh;
+  transition: all .5s;
+}
+}
+
+/* ..................................................................................................... */
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+nav > a {
+  font-family: poppins;
+  font-weight: 600;
+  color: var(--secondary-color);
+  font-size: 25px;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+/* The hero section :2 */
+.Hero {
+  padding: 30px 40px;
+  display: flex;
+  margin-bottom: 80px;
+  gap: 70px;
+  background-color: var(--primary-color);
+  margin-top: 70px;
+}
+.Hero .text {
+  margin-top: 100px;
+  padding: 0px 0px 0px 0px;
+  color: var(--secondary-color);
+}
+.text h2 {
+  font-family: "Inter Tight", sans-serif;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+  font-size: 32px;
+}
+.text p {
+  font-family: poppins;
+  color: var(--secondary-color);
+}
+.image img {
+  width: 380px;
+  border-radius: 50px;
+  border-radius: 25%;
+  box-shadow: 0px 0px 800px #40b07a;
+  -webkit-animation: animatedProfile 2s ease-in-out infinite both;
+  animation: animatedProfile 2s ease-in-out infinite both;
+}
+@-webkit-keyframes animatedProfile {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.links {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.social-media {
+  display: flex;
+  gap: 5px;
+}
+.social-media .socialIcon {
+  border: 1px solid var(--secondary-color);
+  padding: 6px 5px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.social-media .socialIcon:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+}
+.socialIcon .fa-brands {
+  color: var(--primary-color);
+  transition: all 0.4s;
+}
+.socialIcon .fa-brands:hover {
+  color: var(--secondary-color);
+}
+
+.links button {
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  transition: all 0.4s;
+  background-color: var(--secondary-color);
+}
+#home > div.text > div > button > a {
+  color: var(--primary-color);
+}
+.links button:hover {
+  transform: scale(1.05);
+}
+.links .color {
+  background-color: var(--secondary-color);
+}
+button.btn.color > a {
+  color: var(--primary-color);
+}
+.links .btn a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-family: poppins;
+  font-size: 16px;
+}
+/* Media Query for hero */
+@media (max-width: 750px) {
+  .Hero {
+    flex-direction: column-reverse;
+    padding: 20px 20px;
+    margin-top: 30px;
+  }
+  .image {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image img {
+    width: 300px;
+  }
+  .Hero .text {
+    margin-top: 0px;
+    font-size: 15px;
+    text-align: justify;
+  }
+  .text h2 {
+    font-size: 30px;
+  }
+  .links {
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+  }
+  .links button {
+    padding: 15px 40px;
+  }
+    .image {
+    margin: auto;
+  }
+  .links button {
+    padding: 7px 9px;
+  }
+  .modeCon {
+    margin: 0px 15px;
+  }
+}
+
+/* .................................................The About Section..................... */
+#about {
+  padding: 30px 40px;
+  background-color: var(--primary-color);
+}
+.about-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.about-img {
+  text-align: center;
+  margin: 0px auto;
+}
+.about-img img {
+  width: 500px;
+  border-radius: 20px;
+}
+.about-text h2 {
+  font-family: "Inter Tight", sans-serif;
+  margin: 20px 0px;
+  font-size: 35px;
+  color: var(--secondary-color);
+}
+.about-text h2::after {
+  content: "";
+  width: 20%;
+  height: 3px;
+  background: var(--secondary-color);
+  display: block;
+}
+.about-text p {
+  font-family: poppins;
+  color: var(--secondary-color);
+}
+.main {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+.main .details {
+  font-size: 20px;
+  color: var(--secondary-color);
+  font-family: poppins;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+.details::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: all 0.5s;
+}
+.details.special::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: all 0.5s;
+}
+.list {
+  display: none;
+}
+.list.active {
+  display: block;
+}
+.list ul {
+  font-size: poppins;
+  display: block;
+  margin: 20px 0px;
+}
+.list ul li {
+  list-style: none;
+}
+.list ul li span {
+  color: #62952d;
+  font-family: "Inter Tight", sans-serif;
+}
+.list ul li {
+  font-family: poppins;
+  color: var(--secondary-color);
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-img img {
+    width: 320px;
+  }
+}
+/* .................................................My Service Section..................... */
+#service {
+  padding: 30px 40px;
+  margin: 80px 0px;
+  background-color: var(--primary-color);
+}
+#service > h2 {
+  font-family: "Inter Tight", sans-serif;
+  text-align: center;
+  font-size: 35px;
+  color: var(--secondary-color);
+}
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  padding: 15px 0px;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+}
+.service-container .items {
+  border: 1px solid var(--secondary-color);
+  padding: 50px 20px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  transition: all 0.4s;
+}
+.service-container .items:hover {
+  transform: scale(1.05);
+}
+.items h2 {
+  font-family: "Inter Tight", sans-serif;
+  margin: 15px 0px;
+  color: var(--primary-color);
+}
+.items p {
+  color: var(--primary-color);
+  font-family: poppins;
+  margin: 20px 0px;
+}
+
+.items i {
+  font-size: 40px;
+  color: var(--primary-color);
+}
+
+/* .................................................Portfolio Section/Work..................... */
+#portfolio {
+  text-align: center;
+  padding: 30px 40px;
+  margin: 60px 0px;
+  background-color: var(--primary-color);
+}
+.work-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  padding: 15px 0px;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+}
+#portfolio > h2 {
+  font-family: "Inter Tight", sans-serif;
+  color: var(--secondary-color);
+  font-size: 35px;
+  margin: 10px 0px;
+}
+.work-items {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.work-items img {
+  width: 400px;
+  transition: all 0.4s;
+}
+.work-container .details {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(
+    2deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(87, 199, 133, 0) 94%,
+    rgba(237, 221, 83, 0) 100%
+  );
+  position: absolute;
+  border-radius: 10px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.details h2 {
+  font-family: "Inter Tight", sans-serif;
+  color: #fdf0d5;
+  margin-top: 150px;
+}
+.details p {
+  font-family: poppins;
+  color: #fdf0d5;
+  margin: 10px 0px;
+}
+.details button {
+  padding: 7px 20px;
+  background-color: var(--primary-color);
+  border: none;
+  transition: all .3s;
+}
+.details button:hover{
+  background-color: var(--secondary-color);
+}
+.details button a {
+  text-decoration: none;
+  font-family: poppins;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+button:hover a{
+  color: var(--primary-color);
+}
+.work-items:hover .details {
+  height: 100%;
+}
+.work-items:hover img {
+  transform: scale(1.05);
+}
+
+#more {
+  padding: 8px 40px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  font-family: poppins;
+  margin: auto;
+  font-size: 16px;
+  cursor: pointer;
+}
+#less {
+  padding: 8px 40px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  font-family: poppins;
+  font-size: 16px;
+  cursor: pointer;
+  margin: auto;
+  display: none;
+}
+#hide {
+  display: none;
+}
+
+/* .................................................contact Section..................... */
+#contact {
+  padding: 10px 40px;
+}
+#contact > h2 {
+  font-family: "Inter Tight", sans-serif;
+  color: var(--secondary-color);
+  font-size: 35px;
+  margin: 40px 0px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+#contact .contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.contact-container .contact-text {
+  width: 650px;
+  max-width: 90%;
+  margin-top: 20px;
+}
+.contact-text h2 {
+  font-family: "Inter Tight", sans-serif;
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 30px;
+  color: var(--secondary-color);
+}
+.contact-text p {
+  font-family: poppins;
+  color: var(--secondary-color);
+}
+.contact-text .contact-flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.contact-flex .contact-icon {
+  background-color: var(--secondary-color);
+  padding: 5px;
+  border-radius: 2px;
+}
+.contact-icon i {
+  color: var(--primary-color);
+}
+
+.flex-text h3 {
+  font-family: "Inter Tight", sans-serif;
+  color: var(--secondary-color);
+}
+.flex-text a {
+  font-family: poppins;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+.flex-text p{
+  font-family: poppins;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+/* form */
+.form {
+  background-color: var(--secondary-color);
+  width: 400px;
+  max-width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+.inputs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 15 px 0px;
+}
+label {
+  color: var(--primary-color);
+  font-family: poppins;
+  font-size: 12px;
+  font-weight: 500;
+}
+.inputs .input input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.inputs .input {
+  margin: 0px 0px 15px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+textarea {
+  width: 100%;
+  height: 120px;
+  font-family: poppins;
+  padding-left: 5px;
+  border: none;
+  font-size: 13px;
+  outline: none;
+}
+.form button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0px;
+  border-radius: 5px;
+  border: none;
+  font-family: poppins;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #40b07a;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.form button:hover {
+  transform: scale(1.05);
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+/* .................................................The footer Section..................... */
+footer{
+  margin-top: 100px;
+  background-color: var(--primary-color);
+  padding-top: 40px;
+
+}
+footer .footer_social_icons{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+}
+.footer_social_icons div{
+  padding: 15px 15px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  transition: all .3s;
+}
+.footer_social_icons div:hover{
+  background-color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+}
+.footer_social_icons div:hover i{
+  color: var(--secondary-color);
+}
+.footer_social_icons div a{
+  color: var(--primary-color);
+  transition: all .3s;
+}
+.footer_social_icons div a i{
+  font-size: 20px;
+}
+footer >.footer_nav{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin: 20px 0px;
+}
+.footer_nav li{
+  list-style: none;
+}
+.footer_nav li a{
+  text-decoration: none;
+  font-family: poppins;
+  color: var(--secondary-color);
+  font-size: 20px;
+  font-weight: 600;
+}
+footer hr{
+  background-color: var(--primary-color);
+  height: 3px;
+  width: 500px;
+  margin: 10px auto 20px auto;
+}
+footer p{
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-family: poppins;
+  text-align: center;
+  margin: -10px 0px 20px 0px;
+
+}
+@media (max-width: 768px) {
+  footer >.footer_nav{
+    flex-direction: column;
+  }
+  footer hr{
+  width: 300px;
+}
+}
